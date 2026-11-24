@@ -1,0 +1,34 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "yushu"
+version = "0.2.0"
+description = "Yushu's PyPI"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Yushu Shi", email = "shiyushu2019@163.com" }]
+keywords = []
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Operating System :: OS Independent",
+  "Typing :: Typed",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/shiyushu2019"
+Repository = "https://github.com/shiyushu2019/Yushu"
+Issues = "https://github.com/shiyushu2019/Yushu/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/yushu"]
+
+[tool.hatch.build.targets.sdist]
+include = ["src", "README.md", "LICENSE", "pyproject.toml"]
